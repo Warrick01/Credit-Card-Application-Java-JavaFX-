@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 
 public class Controller {
 
@@ -41,13 +42,15 @@ public class Controller {
     @FXML
     private TextField savingsAccount;
 
+    @FXML 
+    private Text loginStatus;
     int custID;
     
    
 
    
    public void saveButtonPressed(ActionEvent event) throws IOException {
-    	// save text from fields into a textFile
+    	// save text from fields into a textFile, text file name is based on the customerID 
 	   
 	
 	   	try {
@@ -55,7 +58,9 @@ public class Controller {
 		   
 	   if (customerID.getText().length() > 4) {
 		   System.out.println("Customer ID can only be four digits in length ");
-	   }else {
+		   loginStatus.setText("FAILED Login (ID too long)");
+		   
+	   }  else {
 		   
 		    File file = new File(customerID.getText().toString());
 	    	FileWriter fw = new FileWriter(file);
@@ -71,18 +76,19 @@ public class Controller {
 	    	pw.close();
 	    	
 	    	System.out.println("Successful login");
-		   
+	    	loginStatus.setText("Logged In");
 	   }
     	
     	
 	   }
 	   catch(NumberFormatException e){
 		   System.out.println("Customer ID must contain only numbers");
+		   loginStatus.setText("FALIED Login (ID integers only)");
 	   }
 	   catch(Exception e) {
 		   System.out.print("Error");
 	   }
-   }
+}
    
    
    public void cancelButtonPressed(ActionEvent event) {

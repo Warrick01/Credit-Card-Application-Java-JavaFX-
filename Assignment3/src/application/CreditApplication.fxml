@@ -5,57 +5,69 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="660.0" prefWidth="796.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <TextField fx:id="fName" layoutX="161.0" layoutY="151.0" />
-      <Label layoutX="50.0" layoutY="155.0" text="First Name:">
+      <TextField fx:id="fName" layoutX="163.0" layoutY="153.0" />
+      <Label layoutX="40.0" layoutY="154.0" text="First Name:">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="45.0" layoutY="220.0" prefHeight="18.0" prefWidth="79.0" text="Customer ID:">
+      <Label layoutX="45.0" layoutY="220.0" prefHeight="20.0" prefWidth="89.0" text="Customer ID:">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
       <TextField fx:id="customerID" layoutX="163.0" layoutY="216.0" />
-      <Label layoutX="159.0" layoutY="61.0" prefHeight="35.0" prefWidth="478.0" text="Credit Card application Form: SunDevil Bank">
+      <Label layoutX="144.0" layoutY="40.0" prefHeight="35.0" prefWidth="509.0" text="Credit Card application Form: SunDevil Bank">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="431.0" layoutY="156.0" text="Last Name">
+      <Label layoutX="446.0" layoutY="156.0" text="Last Name">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="431.0" layoutY="220.0" text="Phone Number">
+      <Label layoutX="446.0" layoutY="219.0" text="Phone Number">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
       <Label layoutX="51.0" layoutY="275.0" prefHeight="18.0" prefWidth="65.0" text="Address:">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
       <TextField fx:id="address" layoutX="163.0" layoutY="272.0" />
       <Label layoutX="50.0" layoutY="389.0" prefHeight="66.0" prefWidth="69.0" text="Savings Account Number:" textAlignment="CENTER" wrapText="true">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
       <TextField fx:id="savingsAccount" layoutX="163.0" layoutY="416.0" />
-      <Label layoutX="431.0" layoutY="389.0" prefHeight="66.0" prefWidth="89.0" text="Checking Account Number:" textAlignment="CENTER" wrapText="true">
+      <Label layoutX="452.0" layoutY="389.0" prefHeight="66.0" prefWidth="89.0" text="Checking Account Number:" textAlignment="CENTER" wrapText="true">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="checkingsAccount" layoutX="536.0" layoutY="417.0" onAction="#saveButtonPressed" />
-      <TextField fx:id="lName" layoutX="538.0" layoutY="151.0" onAction="#saveButtonPressed" />
-      <TextField fx:id="phoneNumber" layoutX="538.0" layoutY="213.0" onAction="#saveButtonPressed" />
-      <Button fx:id="cancelButton" layoutX="189.0" layoutY="501.0" mnemonicParsing="false" onAction="#cancelButtonPressed" prefHeight="55.0" prefWidth="100.0" text="Cancel" />
-      <Button fx:id="saveButton" layoutX="562.0" layoutY="501.0" mnemonicParsing="false" onAction="#saveButtonPressed" prefHeight="55.0" prefWidth="100.0" text="Save" />
+      <TextField fx:id="checkingsAccount" layoutX="562.0" layoutY="416.0" onAction="#saveButtonPressed" />
+      <TextField fx:id="lName" layoutX="562.0" layoutY="151.0" onAction="#saveButtonPressed" />
+      <TextField fx:id="phoneNumber" layoutX="562.0" layoutY="216.0" onAction="#saveButtonPressed" />
+      <Button fx:id="cancelButton" layoutX="189.0" layoutY="501.0" mnemonicParsing="false" onAction="#cancelButtonPressed" prefHeight="55.0" prefWidth="100.0" text="Cancel">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="saveButton" layoutX="491.0" layoutY="501.0" mnemonicParsing="false" onAction="#saveButtonPressed" prefHeight="55.0" prefWidth="100.0" text="Save">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Text fx:id="loginStatus" layoutX="218.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login Status" textAlignment="CENTER" wrappingWidth="359.9830722808838">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
